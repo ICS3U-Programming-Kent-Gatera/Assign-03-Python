@@ -4,7 +4,6 @@
 # This program shows net salary increases for long term employees
 
 import math
-from tkinter import EXCEPTION
 
 
 def main():
@@ -12,7 +11,6 @@ def main():
     user_salary = int()
     time_company = int()
 
-    
     try:
         # process & output.
         # checking if salary is a number.
@@ -24,6 +22,8 @@ def main():
                 "Your new salary is ${:.2f}".format(salary_increase + user_salary_int)
             )
             print("And your net increase is ${0:.2f}".format(salary_increase))
+        elif user_salary_int <= 0 or time_company_int <= 0:
+            print("Please input a valid number/integer.")
         else:
             print("You are not eligible for a salary increase.")
     except:
